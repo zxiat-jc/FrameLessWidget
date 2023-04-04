@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>img/4-squares.svg</file>
+        <file>img/window-close.svg</file>
+        <file>img/window-max.svg</file>
+        <file>img/window-min.svg</file>
+        <file>img/window-restore.svg</file>
+    </qresource>
+</RCC>

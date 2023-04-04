@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FrameLessWidgetClass</class>
+ <widget class="QWidget" name="FrameLessWidgetClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1164</width>
+    <height>885</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FrameLessWidget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#widgetContent {
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+
+
+#widgetContent QTreeWidget {
+    border: 1px solid lightgray;
+}
+
+
+#titleBarWidget QPushButton {
+    min-width: 25px;
+    max-width: 25px;
+    min-height: 25px;
+    max-height: 25px;
+    qproperty-flat: true;
+    border: none;
+}
+#titleBarWidget QPushButton:hover {
+    background-color: #D5E1F2;
+}
+#titleBarWidget QPushButton:pressed {
+    background-color: #A3BDE3;
+}
+#titleBarWidget QPushButton#pushButtonClose {
+    border-image: url(:/res/img/window-close.svg) 0 0 0 0 stretch stretch;
+}
+#titleBarWidget QPushButton#pushButtonRestore {
+    border-image: url(:/res/img/window-restore.svg) 0 0 0 0 stretch stretch;
+}
+#titleBarWidget QPushButton#pushButtonMax {
+    border-image: url(:/res/img/window-max.svg) 0 0 0 0 stretch stretch;
+}
+#titleBarWidget QPushButton#pushButtonMin {
+    border-image: url(:/res/img/window-min.svg) 0 0 0 0 stretch stretch;
+}
+#titleBarWidget QPushButton#pushButtonMenu {
+    border-image: url(:/img/titleBar/menu.png) 0 0 0 0 stretch stretch;
+}
+
+
+#menuBarTabWidget::tab-bar {
+    left: 65px;
+}
+#menuBarTabWidget {
+    border: 1px;
+}
+#menuBarTabWidget {
+    background-color: #2B579A;
+}
+#menuBarTabWidget::pane {
+    border: 1px solid lightgray;
+    border-left: 0px;
+    border-right: 0px;
+}
+#menuBarTabWidget QTabBar::tab{
+    min-width: 55px;
+    max-width: 55px;
+    min-height: 23px;
+    max-height: 23px;
+}
+#menuBarTabWidget QTabBar::tab {
+    background: transparent;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+#menuBarTabWidget QTabBar::tab:hover {
+    color: #2B579A;
+}
+#menuBarTabWidget QTabBar::tab:selected {
+    border: 1px solid #BAC9DB;
+    background: white;
+    border-bottom-color: #FFFFFF;
+}
+#menuBarTabWidget QTabBar::tab:!selected {
+    margin-top: 1px;
+}
+
+
+QMenu {
+    background-color: #FCFCFC;
+    border: 1px solid #8492A6;
+}
+QMenu::item {
+    background-color: transparent;
+}
+QMenu::item:selected {
+    color: black;
+    background-color: #D5E1F2;
+}
+
+
+#pushBtnFileMenu {
+    min-width: 58px;
+    max-width: 58px;
+    min-height: 23px;
+    max-height: 23px;
+    color: white;
+    border: 1px solid #2B579A;
+    background-color: #2B579A;
+}
+#pushBtnFileMenu::menu-indicator {
+    image: none;
+}
+
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0">
+   <property name="spacing">
+    <number>5</number>
+   </property>
+   <property name="leftMargin">
+    <number>5</number>
+   </property>
+   <property name="topMargin">
+    <number>5</number>
+   </property>
+   <property name="rightMargin">
+    <number>5</number>
+   </property>
+   <property name="bottomMargin">
+    <number>5</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widgetContent" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>7</number>
+      </property>
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="topMargin">
+       <number>5</number>
+      </property>
+      <property name="rightMargin">
+       <number>5</number>
+      </property>
+      <property name="bottomMargin">
+       <number>5</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="titleBarWidget" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>35</height>
+         </size>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <layout class="QHBoxLayout" name="titleBarLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetDefaultConstraint</enum>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="icon">
+             <property name="minimumSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="title">
+             <property name="minimumSize">
+              <size>
+               <width>60</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Expanding</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>1</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonMin">
+             <property name="minimumSize">
+              <size>
+               <width>25</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>25</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonRestore">
+             <property name="minimumSize">
+              <size>
+               <width>25</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>25</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonMax">
+             <property name="minimumSize">
+              <size>
+               <width>25</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>25</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonClose">
+             <property name="minimumSize">
+              <size>
+               <width>25</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>25</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="centerWidget" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout"/>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
