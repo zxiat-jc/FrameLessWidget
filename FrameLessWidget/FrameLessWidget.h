@@ -21,6 +21,15 @@ public:
 
     virtual ~FrameLessWidget();
 
+    // setCenterWidget
+    void setCenterWidget(QWidget* widget);
+
+    // centerWidget
+    QWidget* centerWidget() const;
+
+    // widgetContent
+    QWidget* widgetContent() const;
+
 protected:
     // mousePressEvent
     void mousePressEvent(QMouseEvent* event) override;

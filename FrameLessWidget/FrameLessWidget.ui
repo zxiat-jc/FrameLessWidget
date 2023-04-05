@@ -34,6 +34,7 @@
     qproperty-flat: true;
     border: none;
 }
+
 #titleBarWidget QPushButton:hover {
     background-color: #D5E1F2;
 }
@@ -332,7 +333,23 @@ QMenu::item:selected {
       </item>
       <item>
        <widget class="QWidget" name="centerWidget" native="true">
-        <layout class="QVBoxLayout" name="verticalLayout"/>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+        </layout>
        </widget>
       </item>
      </layout>

@@ -46,6 +46,21 @@ FrameLessWidget::~FrameLessWidget()
 {
 }
 
+void FrameLessWidget::setCenterWidget(QWidget* widget)
+{
+    ui->centerWidget = widget;
+}
+
+QWidget* FrameLessWidget::centerWidget() const
+{
+    return ui->centerWidget;
+}
+
+QWidget* FrameLessWidget::widgetContent() const
+{
+    return ui->widgetContent;
+}
+
 void FrameLessWidget::mousePressEvent(QMouseEvent* event)
 {
     if (event->button() == Qt::LeftButton) {
