@@ -1,12 +1,12 @@
 ﻿#include "FrameLessWidget.h"
 
-#include "ui_FrameLessWidget.h"
-
 #include <QEvent>
 #include <QGraphicsDropShadowEffect>
 #include <QGuiApplication>
 #include <QMouseEvent>
 #include <QScreen>
+
+#include "ui_FrameLessWidget.h"
 
 FrameLessWidget::FrameLessWidget(QWidget* parent)
     : QWidget(parent)
@@ -105,7 +105,9 @@ bool FrameLessWidget::nativeEvent(const QByteArray& eventType, void* message, qi
     }
     case WM_NCHITTEST: {
         *result = 0;
-        const LONG border_width = 5;
+        if (isMaximized()) {
+            return false;
+        }
         RECT winrect;
         GetWindowRect(reinterpret_cast<HWND>(winId()), &winrect);
 
@@ -117,39 +119,39 @@ bool FrameLessWidget::nativeEvent(const QByteArray& eventType, void* message, qi
 
         if (resizeWidth) {
             // 左边
-            if (x >= winrect.left && x < winrect.left + border_width) {
+            if (x >= winrect.left && x < winrect.left + _borderWidth) {
                 *result = HTLEFT;
             }
             // 右边
-            if (x < winrect.right && x >= winrect.right - border_width) {
+            if (x < winrect.right && x >= winrect.right - _borderWidth) {
                 *result = HTRIGHT;
             }
         }
         if (resizeHeight) {
             // 底边
-            if (y < winrect.bottom && y >= winrect.bottom - border_width) {
+            if (y < winrect.bottom && y >= winrect.bottom - _borderWidth) {
                 *result = HTBOTTOM;
             }
             // top border
-            if (y >= winrect.top && y < winrect.top + border_width) {
+            if (y >= winrect.top && y < winrect.top + _borderWidth) {
                 *result = HTTOP;
             }
         }
         if (resizeWidth && resizeHeight) {
             // 左底边
-            if (x >= winrect.left && x < winrect.left + border_width && y < winrect.bottom && y >= winrect.bottom - border_width) {
+            if (x >= winrect.left && x < winrect.left + _borderWidth && y < winrect.bottom && y >= winrect.bottom - _borderWidth) {
                 *result = HTBOTTOMLEFT;
             }
             // 右底边
-            if (x < winrect.right && x >= winrect.right - border_width && y < winrect.bottom && y >= winrect.bottom - border_width) {
+            if (x < winrect.right && x >= winrect.right - _borderWidth && y < winrect.bottom && y >= winrect.bottom - _borderWidth) {
                 *result = HTBOTTOMRIGHT;
             }
             // 左上边
-            if (x >= winrect.left && x < winrect.left + border_width && y >= winrect.top && y < winrect.top + border_width) {
+            if (x >= winrect.left && x < winrect.left + _borderWidth && y >= winrect.top && y < winrect.top + _borderWidth) {
                 *result = HTTOPLEFT;
             }
             // 右上边
-            if (x < winrect.right && x >= winrect.right - border_width && y >= winrect.top && y < winrect.top + border_width) {
+            if (x < winrect.right && x >= winrect.right - _borderWidth && y >= winrect.top && y < winrect.top + _borderWidth) {
                 *result = HTTOPRIGHT;
             }
         }
@@ -173,13 +175,4 @@ bool FrameLessWidget::nativeEvent(const QByteArray& eventType, void* message, qi
     }
     }
     return QWidget::nativeEvent(eventType, message, result);
-}
-
-void FrameLessWidget::createShadow()
-{
-    QGraphicsDropShadowEffect* shadowEffect = new QGraphicsDropShadowEffect(this);
-    shadowEffect->setColor(Qt::black);
-    shadowEffect->setOffset(0, 0);
-    shadowEffect->setBlurRadius(13);
-    ui->widgetContent->setGraphicsEffect(shadowEffect);
 }

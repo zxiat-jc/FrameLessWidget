@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>img/4-squares.svg</file>
+    </qresource>
+</RCC>

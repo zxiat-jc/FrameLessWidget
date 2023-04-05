@@ -32,8 +32,9 @@ protected:
     bool nativeEvent(const QByteArray& eventType, void* message, qintptr* result) override;
 
 private:
-    void createShadow();
-
-private:
     Ui::FrameLessWidgetClass* ui = nullptr;
+    /**
+     * @brief 识别为拖拉边界的范围
+     */
+    long _borderWidth = 10;
 };

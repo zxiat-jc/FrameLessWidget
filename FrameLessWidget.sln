@@ -5,6 +5,13 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FrameLessWidget", "FrameLessWidget\FrameLessWidget.vcxproj", "{C97025ED-17A5-4B82-B918-FB2271331468}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FrameLessWidgetTest", "FrameLessWidgetTest\FrameLessWidgetTest.vcxproj", "{72E296BB-5FED-4DCE-8BD0-2DF99428DE36}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{0816AD52-E4BC-46CF-BD31-A4DA96A6C735}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -15,6 +22,10 @@ Global
 		{C97025ED-17A5-4B82-B918-FB2271331468}.Debug|x64.Build.0 = Debug|x64
 		{C97025ED-17A5-4B82-B918-FB2271331468}.Release|x64.ActiveCfg = Release|x64
 		{C97025ED-17A5-4B82-B918-FB2271331468}.Release|x64.Build.0 = Release|x64
+		{72E296BB-5FED-4DCE-8BD0-2DF99428DE36}.Debug|x64.ActiveCfg = Debug|x64
+		{72E296BB-5FED-4DCE-8BD0-2DF99428DE36}.Debug|x64.Build.0 = Debug|x64
+		{72E296BB-5FED-4DCE-8BD0-2DF99428DE36}.Release|x64.ActiveCfg = Release|x64
+		{72E296BB-5FED-4DCE-8BD0-2DF99428DE36}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
