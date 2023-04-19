@@ -61,6 +61,19 @@ QWidget* FrameLessWidget::widgetContent() const
     return ui->widgetContent;
 }
 
+void FrameLessWidget::setMenuBar(QWidget* menu)
+{
+    if (menu == nullptr && this->_menuBar != nullptr) {
+        ui->menuBar->layout()->removeWidget(this->_menuBar);
+    }
+    ui->menuBar->layout()->addWidget(this->_menuBar = menu);
+}
+
+QWidget* FrameLessWidget::menuBar()
+{
+    return this->_menuBar;
+}
+
 void FrameLessWidget::mousePressEvent(QMouseEvent* event)
 {
     if (event->button() == Qt::LeftButton) {
