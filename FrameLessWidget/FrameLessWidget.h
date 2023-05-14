@@ -33,6 +33,9 @@ public:
     // 设置菜单栏
     void setMenuBar(QWidget* menu);
 
+    // 隐藏菜单栏
+    void hideMenuBar();
+
     // 获取菜单栏
     QWidget* menuBar();
 

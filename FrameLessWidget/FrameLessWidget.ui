@@ -147,16 +147,16 @@ QMenu::item:selected {
        <number>7</number>
       </property>
       <property name="leftMargin">
-       <number>5</number>
+       <number>2</number>
       </property>
       <property name="topMargin">
-       <number>5</number>
+       <number>2</number>
       </property>
       <property name="rightMargin">
-       <number>5</number>
+       <number>2</number>
       </property>
       <property name="bottomMargin">
-       <number>5</number>
+       <number>2</number>
       </property>
       <item>
        <widget class="QWidget" name="titleBarWidget" native="true">
@@ -218,6 +218,25 @@ QMenu::item:selected {
              </property>
              <property name="text">
               <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="minimumSize">
+              <size>
+               <width>10</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>10</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>TexLabel</string>
              </property>
             </widget>
            </item>
@@ -365,25 +384,7 @@ QMenu::item:selected {
        </widget>
       </item>
       <item>
-       <widget class="QWidget" name="centerWidget" native="true">
-        <layout class="QVBoxLayout" name="verticalLayout">
-         <property name="spacing">
-          <number>0</number>
-         </property>
-         <property name="leftMargin">
-          <number>0</number>
-         </property>
-         <property name="topMargin">
-          <number>0</number>
-         </property>
-         <property name="rightMargin">
-          <number>0</number>
-         </property>
-         <property name="bottomMargin">
-          <number>0</number>
-         </property>
-        </layout>
-       </widget>
+       <widget class="QWidget" name="centerWidget" native="true"/>
       </item>
      </layout>
     </widget>

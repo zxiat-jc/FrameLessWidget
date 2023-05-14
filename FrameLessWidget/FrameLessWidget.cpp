@@ -69,6 +69,11 @@ void FrameLessWidget::setMenuBar(QWidget* menu)
     ui->menuBar->layout()->addWidget(this->_menuBar = menu);
 }
 
+void FrameLessWidget::hideMenuBar()
+{
+    ui->menuBar->hide();
+}
+
 QWidget* FrameLessWidget::menuBar()
 {
     return this->_menuBar;
