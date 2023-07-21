@@ -118,7 +118,11 @@ void FrameLessWidget::changeEvent(QEvent* event)
     return QWidget::changeEvent(event);
 }
 
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 bool FrameLessWidget::nativeEvent(const QByteArray& eventType, void* message, qintptr* result)
+#else
+bool FrameLessWidget::nativeEvent(const QByteArray& eventType, void* message, long* result)
+#endif
 {
     Q_UNUSED(eventType);
 
