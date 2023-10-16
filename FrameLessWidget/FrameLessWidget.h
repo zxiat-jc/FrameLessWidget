@@ -30,14 +30,34 @@ public:
     // widgetContent
     QWidget* widgetContent() const;
 
-    // 设置菜单栏
+    /**
+     * @brief 设置菜单栏
+     * @param menu QWidget*
+     */
     void setMenuBar(QWidget* menu);
 
-    // 隐藏菜单栏
+    /**
+     * @brief 隐藏菜单栏
+     */
     void hideMenuBar();
 
-    // 获取菜单栏
+    /**
+     * @brief 获取菜单栏
+     * @return QWidget*
+     */
     QWidget* menuBar();
+
+    /**
+     * @brief 工具栏
+     * @return QWidget*
+     */
+    QWidget* toolBar();
+
+    /**
+     * @brief 工具栏显示
+     * @param visible 是否显示
+     */
+    void setToolBarVisible(bool visible);
 
 protected:
     // mousePressEvent

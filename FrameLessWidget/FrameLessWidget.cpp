@@ -79,6 +79,16 @@ QWidget* FrameLessWidget::menuBar()
     return this->_menuBar;
 }
 
+QWidget* FrameLessWidget::toolBar()
+{
+    return ui->toolBar;
+}
+
+void FrameLessWidget::setToolBarVisible(bool visible)
+{
+    ui->toolBar->setVisible(visible);
+}
+
 void FrameLessWidget::mousePressEvent(QMouseEvent* event)
 {
     if (event->button() == Qt::LeftButton) {
