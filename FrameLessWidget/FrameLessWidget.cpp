@@ -61,22 +61,14 @@ QWidget* FrameLessWidget::widgetContent() const
     return ui->widgetContent;
 }
 
-void FrameLessWidget::setMenuBar(QWidget* menu)
-{
-    if (menu == nullptr && this->_menuBar != nullptr) {
-        ui->menuBar->layout()->removeWidget(this->_menuBar);
-    }
-    ui->menuBar->layout()->addWidget(this->_menuBar = menu);
-}
-
 void FrameLessWidget::hideMenuBar()
 {
     ui->menuBar->hide();
 }
 
-QWidget* FrameLessWidget::menuBar()
+QMenuBar* FrameLessWidget::menuBar()
 {
-    return this->_menuBar;
+    return ui->menuBar;
 }
 
 QWidget* FrameLessWidget::toolBar()

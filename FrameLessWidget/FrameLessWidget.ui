@@ -58,42 +58,6 @@
 }
 
 
-#menuBarTabWidget::tab-bar {
-    left: 65px;
-}
-#menuBarTabWidget {
-    border: 1px;
-}
-#menuBarTabWidget {
-    background-color: #2B579A;
-}
-#menuBarTabWidget::pane {
-    border: 1px solid lightgray;
-    border-left: 0px;
-    border-right: 0px;
-}
-#menuBarTabWidget QTabBar::tab{
-    min-width: 55px;
-    max-width: 55px;
-    min-height: 23px;
-    max-height: 23px;
-}
-#menuBarTabWidget QTabBar::tab {
-    background: transparent;
-    margin-left: 4px;
-    margin-right: 4px;
-}
-#menuBarTabWidget QTabBar::tab:hover {
-    color: #2B579A;
-}
-#menuBarTabWidget QTabBar::tab:selected {
-    border: 1px solid #BAC9DB;
-    background: white;
-    border-bottom-color: #FFFFFF;
-}
-#menuBarTabWidget QTabBar::tab:!selected {
-    margin-top: 1px;
-}
 
 
 QMenu {
@@ -356,7 +320,7 @@ QMenu::item:selected {
          <number>1</number>
         </property>
         <item>
-         <widget class="QWidget" name="menuBar" native="true">
+         <widget class="QMenuBar" name="menuBar">
           <property name="minimumSize">
            <size>
             <width>0</width>
