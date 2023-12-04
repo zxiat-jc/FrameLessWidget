@@ -90,50 +90,50 @@ QMenu::item:selected {
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0">
    <property name="spacing">
-    <number>5</number>
+    <number>0</number>
    </property>
    <property name="leftMargin">
-    <number>5</number>
+    <number>0</number>
    </property>
    <property name="topMargin">
-    <number>5</number>
+    <number>0</number>
    </property>
    <property name="rightMargin">
-    <number>5</number>
+    <number>0</number>
    </property>
    <property name="bottomMargin">
-    <number>5</number>
+    <number>0</number>
    </property>
    <item>
     <widget class="QWidget" name="widgetContent" native="true">
-     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,10">
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,10">
       <property name="spacing">
-       <number>7</number>
+       <number>3</number>
       </property>
       <property name="leftMargin">
-       <number>2</number>
+       <number>1</number>
       </property>
       <property name="topMargin">
-       <number>2</number>
+       <number>1</number>
       </property>
       <property name="rightMargin">
-       <number>2</number>
+       <number>1</number>
       </property>
       <property name="bottomMargin">
-       <number>2</number>
+       <number>1</number>
       </property>
       <item>
        <widget class="QWidget" name="titleBarWidget" native="true">
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>35</height>
+          <height>25</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
           <width>16777215</width>
-          <height>35</height>
+          <height>25</height>
          </size>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -176,8 +176,8 @@ QMenu::item:selected {
             <widget class="QLabel" name="icon">
              <property name="minimumSize">
               <size>
-               <width>30</width>
-               <height>30</height>
+               <width>25</width>
+               <height>25</height>
               </size>
              </property>
              <property name="text">
@@ -208,8 +208,8 @@ QMenu::item:selected {
             <widget class="QLabel" name="title">
              <property name="minimumSize">
               <size>
-               <width>60</width>
-               <height>30</height>
+               <width>40</width>
+               <height>25</height>
               </size>
              </property>
              <property name="text">
@@ -237,18 +237,24 @@ QMenu::item:selected {
             <widget class="QPushButton" name="pushButtonMin">
              <property name="minimumSize">
               <size>
-               <width>25</width>
-               <height>25</height>
+               <width>23</width>
+               <height>23</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>25</width>
-               <height>25</height>
+               <width>23</width>
+               <height>23</height>
               </size>
              </property>
              <property name="text">
               <string/>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>18</width>
+               <height>18</height>
+              </size>
              </property>
             </widget>
            </item>
@@ -256,18 +262,24 @@ QMenu::item:selected {
             <widget class="QPushButton" name="pushButtonRestore">
              <property name="minimumSize">
               <size>
-               <width>25</width>
-               <height>25</height>
+               <width>23</width>
+               <height>23</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>25</width>
-               <height>25</height>
+               <width>23</width>
+               <height>23</height>
               </size>
              </property>
              <property name="text">
               <string/>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>18</width>
+               <height>18</height>
+              </size>
              </property>
             </widget>
            </item>
@@ -275,18 +287,24 @@ QMenu::item:selected {
             <widget class="QPushButton" name="pushButtonMax">
              <property name="minimumSize">
               <size>
-               <width>25</width>
-               <height>25</height>
+               <width>23</width>
+               <height>23</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>25</width>
-               <height>25</height>
+               <width>23</width>
+               <height>23</height>
               </size>
              </property>
              <property name="text">
               <string/>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>18</width>
+               <height>18</height>
+              </size>
              </property>
             </widget>
            </item>
@@ -294,18 +312,24 @@ QMenu::item:selected {
             <widget class="QPushButton" name="pushButtonClose">
              <property name="minimumSize">
               <size>
-               <width>25</width>
-               <height>25</height>
+               <width>23</width>
+               <height>23</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>25</width>
-               <height>25</height>
+               <width>23</width>
+               <height>23</height>
               </size>
              </property>
              <property name="text">
               <string/>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>18</width>
+               <height>18</height>
+              </size>
              </property>
             </widget>
            </item>
@@ -354,21 +378,34 @@ QMenu::item:selected {
         </item>
         <item>
          <widget class="QWidget" name="toolBar" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>35</height>
+            <height>22</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
             <width>16777215</width>
-            <height>35</height>
+            <height>22</height>
            </size>
           </property>
          </widget>
         </item>
        </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QWidget" name="centerWidget" native="true"/>
