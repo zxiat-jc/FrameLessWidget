@@ -67,7 +67,7 @@ protected:
     virtual bool nativeEvent(const QByteArray& eventType, void* message, long* result) override;
 #endif
 
-private:
+protected:
     Ui::FrameLessWidgetClass* ui = nullptr;
 
     /**
