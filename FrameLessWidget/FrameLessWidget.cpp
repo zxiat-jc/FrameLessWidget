@@ -44,6 +44,7 @@ FrameLessWidget::FrameLessWidget(QWidget* parent)
 
 FrameLessWidget::~FrameLessWidget()
 {
+    delete ui;
 }
 
 void FrameLessWidget::setCenterWidget(QWidget* widget)
